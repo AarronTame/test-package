@@ -1,5 +1,11 @@
 # @tame/test
 
+## 0.1.0
+
+### Minor Changes
+
+- initial
+
 ## 0.0.2
 
 ### Patch Changes
