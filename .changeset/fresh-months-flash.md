@@ -1,0 +1,5 @@
+---
+"@tame/test": patch
+---
+
+initial
