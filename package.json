@@ -1,7 +1,7 @@
 {
 	"name": "@tame/test",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
 		"dev": "vitest",
 		"build": "tsup index.ts --format cjs,esm --dts",
 		"lint": "tsc",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"release": "pnpm run build && changeset publish"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.26.0",
