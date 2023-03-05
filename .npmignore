@@ -2,6 +2,7 @@
 .changeset
 .github
 .vscode
+lib
 src
 tests
 assets
@@ -13,7 +14,4 @@ coverage
 .prettierrc
 pnpm-lock.yaml
 tsconfig.json
-index.js
-plop.js
-plopfile.js
 tsup.config.ts
