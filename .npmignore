@@ -8,7 +8,7 @@ assets
 plop-templates
 .prettierignore
 .prettierrc
-.index.js
+index.js
 plop.js
 plopfile.js
 tsup.config.ts
