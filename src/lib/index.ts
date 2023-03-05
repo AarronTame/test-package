@@ -33,7 +33,7 @@ export const renderPathForWeight = (
 	const path = pathsByWeight.get(weight);
 	if (!!path) return path(color);
 
-	console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".');
-
-	return null;
+	throw Error(
+		`Unsupported icon weight: {${weight}}. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".`
+	);
 };

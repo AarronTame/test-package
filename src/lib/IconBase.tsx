@@ -25,6 +25,7 @@ const IconBase = forwardRef<SVGSVGElement, IconBaseProps>((props, ref) => {
 			fill={color ?? contextColor}
 			viewBox="0 0 256 256"
 			transform={mirrored || contextMirrored ? "scale(-1, 1)" : undefined}
+			data-weight={weight}
 			{...restContext}
 			{...restProps}
 		>

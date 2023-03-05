@@ -4,7 +4,7 @@ export default defineConfig({
 	splitting: true,
 	clean: true,
 	dts: true,
-	format: ["esm", "cjs"],
+	format: ["cjs", "esm"],
 	minify: true,
 	bundle: true,
 	skipNodeModulesBundle: true,
