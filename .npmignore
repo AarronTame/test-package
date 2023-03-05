@@ -2,16 +2,17 @@
 .changeset
 .github
 .vscode
-lib
+bin
 src
 tests
 assets
-plop-templates
 coverage
 
 ## Specific files
+.gitignore
 .prettierignore
 .prettierrc
 pnpm-lock.yaml
 tsconfig.json
 tsup.config.ts
+vite.config.ts
