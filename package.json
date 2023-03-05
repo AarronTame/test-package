@@ -14,7 +14,7 @@
 		"build": "tsup",
 		"lint": "tsc",
 		"format": "prettier --write .",
-		"ci:publish": "pnpm run build && pnpm publish -r"
+		"ci:publish": "pnpm run build && pnpm publish -r --no-git-checks"
 	},
 	"peerDependencies": {
 		"react": ">=16"
