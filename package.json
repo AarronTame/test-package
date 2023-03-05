@@ -9,6 +9,9 @@
 	"main": "dist/index.js",
 	"module": "dist/index.cjs",
 	"types": "dist/index.d.ts",
+	"repository": {
+		"url": "https://github.com/AarronTame/test-package"
+	},
 	"scripts": {
 		"dev": "ts-node index.js",
 		"test": "vitest --coverage --ui",
