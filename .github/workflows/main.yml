@@ -19,8 +19,9 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - run: pnpm run ci:test
+      
       - name: Upload coverage reports to Codecov
-        run: pnpm run ci:test
         uses: codecov/codecov-action@v3
 
       - run: pnpm run lint &&  && pnpm run build
