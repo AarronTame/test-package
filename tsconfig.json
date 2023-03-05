@@ -1,15 +1,31 @@
 {
+	"include": ["./src"],
+	"exclude": ["./test"],
 	"compilerOptions": {
-		"target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-		"module": "commonjs" /* Specify what module code is generated. */,
-		"esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
-		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-		"strict": true /* Enable all strict type-checking options. */,
-		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
-		"noUncheckedIndexedAccess": true,
-		"noEmit": true,
-		"rootDir": ".",
-		"jsx": "react-jsx"
-	},
-	"include": ["src", "tests"]
+		"module": "ESNext",
+		"target": "ESNext",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"types": ["vite/client"],
+		"jsx": "react-jsx",
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"esModuleInterop": true,
+		"importHelpers": true,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true
+	}
 }

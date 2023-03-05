@@ -1,0 +1,21 @@
+/* GENERATED FILE */
+import { forwardRef } from "react";
+import { IconBase } from "../lib/IconBase";
+import type { IconWeight, Icon } from "../lib";
+
+const pathsByWeight = new Map<IconWeight, JSX.Element>([
+  {{#each weightMaps}}
+  [
+    "{{key}}",
+    <>
+      {{{content}}}
+    </>
+  ],
+  {{/each}}
+]);
+
+const {{ pascalCase name }}: Icon = forwardRef((props, ref) => <IconBase ref={ref} {...props} weights={pathsByWeight} />);
+
+{{ pascalCase name }}.displayName = "{{ pascalCase name }}";
+
+export default {{ pascalCase name }};

@@ -1,12 +1,13 @@
-import { forwardRef, useContext } from "react";
-import { IconProps, IconContext, RenderFunction } from "../lib";
+import * as React from "react";
+import { IconContext, IconWeight } from "./";
+import type { IconProps } from "./";
 
 interface IconBaseProps extends IconProps {
-	renderPath: RenderFunction;
+	weights: Map<IconWeight, React.ReactElement>;
 }
 
-const IconBase = forwardRef<SVGSVGElement, IconBaseProps>((props, ref) => {
-	const { alt, color, size, weight, mirrored, children, renderPath, ...restProps } = props;
+const IconBase = React.forwardRef<SVGSVGElement, IconBaseProps>((props, ref) => {
+	const { alt, color, size, weight, mirrored, children, weights, ...restProps } = props;
 
 	const {
 		color: contextColor = "currentColor",
@@ -14,7 +15,7 @@ const IconBase = forwardRef<SVGSVGElement, IconBaseProps>((props, ref) => {
 		weight: contextWeight = "regular",
 		mirrored: contextMirrored = false,
 		...restContext
-	} = useContext(IconContext);
+	} = React.useContext(IconContext);
 
 	return (
 		<svg
@@ -31,7 +32,7 @@ const IconBase = forwardRef<SVGSVGElement, IconBaseProps>((props, ref) => {
 		>
 			{!!alt && <title>{alt}</title>}
 			{children}
-			{renderPath(weight ?? contextWeight, color ?? contextColor)}
+			{weights.get(weight ?? contextWeight)}
 		</svg>
 	);
 });

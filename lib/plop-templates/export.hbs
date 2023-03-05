@@ -1,8 +1,0 @@
-/* GENERATED FILE */
-export { Icon, IconProps, IconWeight, RenderFunction, IconContext } from "./lib";
-export { IconBase } from './lib/IconBase';
-export { Icons } from './lib/icons';
-
-{{#each data}}
-export { {{ pascalCase this }}, {{ camelCase this }}Definition } from "./icons/{{ pascalCase this }}";
-{{/each}}

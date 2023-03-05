@@ -1,0 +1,10 @@
+/* GENERATED FILE */
+export type { Icon, IconProps, IconWeight, RenderFunction } from "./lib";
+export type { Icons } from './lib/icons';
+
+export { IconBase } from './lib/IconBase';
+export { IconContext } from "./lib";
+
+{{#each icons}}
+export { default as {{ pascalCase this }} } from "./icons/{{ pascalCase this }}";
+{{/each}}
