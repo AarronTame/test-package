@@ -43,6 +43,46 @@ describe("icons", () => {
 		);
 	});
 
+	it("renderPathForWeight should throw with invalid weight", () => {
+		// @ts-expect-error
+		expect(() => renderPathForWeight("unknown", "red", new Map())).toThrowError(
+			/^Unsupported icon weight: {unknown}. Choose from/
+		);
+	});
+
+	describe("IconBase", () => {
+		it("has the correct transform if 'mirrored' prop is passed", () => {
+			const result = render(
+				<Icons.IconBase mirrored weight="regular" data-testid="test" renderPath={() => <rect />} />
+			);
+			const element = getByTestId(result.container, "test");
+
+			expect(element.getAttribute("transform")).toBe("scale(-1, 1)");
+		});
+
+		it("has the correct weight if no weight value passed in", () => {
+			const result = render(<Icons.IconBase mirrored data-testid="test" renderPath={() => <rect />} />);
+			const element = getByTestId(result.container, "test");
+			expect(element.getAttribute("data-weight")).toBe("regular");
+		});
+
+		it("has no title if alt prop is not passed", () => {
+			const result = render(<Icons.IconBase mirrored data-testid="test" renderPath={() => <rect />} />);
+			const element = result.queryByText(/svg title from alt prop/);
+
+			expect(element).toBeNull();
+		});
+
+		it("has no title if alt prop is passed", () => {
+			const result = render(
+				<Icons.IconBase mirrored data-testid="test" alt="svg title from alt prop" renderPath={() => <rect />} />
+			);
+			const element = result.queryByText(/svg title from alt prop/);
+
+			expect(element).not.toBeNull();
+		});
+	});
+
 	describe.each(iconsMap)("Icon: $name", ({ name, Icon }) => {
 		const testId = `test-${name}`;
 
@@ -84,5 +124,52 @@ describe("icons", () => {
 			// @ts-expect-error
 			expect(() => definition()).toThrowError(/^Unsupported icon weight: {undefined}. Choose from/);
 		});
+	});
+});
+
+describe("icon context", () => {
+	const IconProvider = ({ children }: { children: React.ReactNode }) => {
+		return (
+			<Icons.IconContext.Provider
+				value={{
+					color: "salmon",
+					weight: "light",
+					mirrored: false,
+				}}
+			>
+				{children}
+			</Icons.IconContext.Provider>
+		);
+	};
+
+	it("icon should use values from the context", () => {
+		const result = render(<Icons.Activity data-testid="test" />, { wrapper: IconProvider });
+		const element = getByTestId(result.container, "test");
+
+		expect(element.getAttribute("fill")).toBe("salmon");
+		expect(element.getAttribute("data-weight")).toBe("light");
+		expect(element.getAttribute("transform")).toBeNull();
+	});
+
+	it("icon should overrite context values", () => {
+		const result = render(<Icons.Activity data-testid="test" color="red" mirrored />, { wrapper: IconProvider });
+		const element = getByTestId(result.container, "test");
+
+		expect(element.getAttribute("fill")).toBe("red");
+		expect(element.getAttribute("transform")).toBe("scale(-1, 1)");
+	});
+
+	it("should use default values if no values passed to context", () => {
+		const result = render(
+			<Icons.IconContext.Provider value={{}}>
+				<Icons.Activity data-testid="test" />
+			</Icons.IconContext.Provider>
+		);
+		const element = getByTestId(result.container, "test");
+
+		expect(element.getAttribute("fill")).toBe("currentColor");
+		expect(element.getAttribute("data-weight")).toBe("regular");
+		expect(element.getAttribute("width")).toBeNull();
+		expect(element.getAttribute("height")).toBeNull();
 	});
 });

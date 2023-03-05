@@ -13,7 +13,7 @@
 		"url": "https://github.com/AarronTame/test-package"
 	},
 	"scripts": {
-		"dev": "ts-node index.js",
+		"dev": "ts-node lib/index.js",
 		"test": "vitest",
 		"test:coverage": "vitest --coverage",
 		"build": "tsup",
