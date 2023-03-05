@@ -1,15 +1,19 @@
-src
-tests
-pnpm-lock.yaml
-tsconfig.json
+## non dist directories
 .changeset
 .github
+.vscode
+src
+tests
 assets
 plop-templates
+coverage
+
+## Specific files
 .prettierignore
 .prettierrc
+pnpm-lock.yaml
+tsconfig.json
 index.js
 plop.js
 plopfile.js
 tsup.config.ts
-coverage

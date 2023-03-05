@@ -14,11 +14,12 @@
 	},
 	"scripts": {
 		"dev": "ts-node index.js",
-		"test": "vitest --coverage --ui",
+		"test": "vitest",
+		"test:coverage": "vitest --coverage",
 		"build": "tsup",
 		"lint": "tsc",
 		"format": "prettier --write .",
-		"ci:test": "vitest run",
+		"ci:test": "vitest run --coverage",
 		"ci:publish": "pnpm run build && pnpm publish -r --no-git-checks"
 	},
 	"peerDependencies": {
@@ -34,7 +35,6 @@
 		"@types/react-dom": "^18.0.11",
 		"@types/testing-library__jest-dom": "^5.14.5",
 		"@vitest/coverage-istanbul": "^0.29.2",
-		"@vitest/ui": "^0.29.2",
 		"humanize-duration": "^3.28.0",
 		"jsdom": "^21.1.0",
 		"node-plop": "^0.31.1",

@@ -10,7 +10,6 @@ specifiers:
   '@types/react-dom': ^18.0.11
   '@types/testing-library__jest-dom': ^5.14.5
   '@vitest/coverage-istanbul': ^0.29.2
-  '@vitest/ui': ^0.29.2
   humanize-duration: ^3.28.0
   jsdom: ^21.1.0
   node-plop: ^0.31.1
@@ -32,7 +31,6 @@ devDependencies:
   '@types/react-dom': 18.0.11
   '@types/testing-library__jest-dom': 5.14.5
   '@vitest/coverage-istanbul': 0.29.2_vitest@0.29.2
-  '@vitest/ui': 0.29.2
   humanize-duration: 3.28.0
   jsdom: 21.1.0
   node-plop: 0.31.1
@@ -42,7 +40,7 @@ devDependencies:
   ts-node: 10.9.1_alpjt73dvgv6kni625hu7f2l4m
   tsup: 6.6.3_6qtx7vkbdhwvdm4crzlegk4mvi
   typescript: 4.9.5
-  vitest: 0.29.2_hjnfa4mohew6fc4mnpzgbfyvpa
+  vitest: 0.29.2_jsdom@21.1.0
 
 packages:
 
@@ -964,10 +962,6 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@polka/url/1.0.0-next.21:
-    resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
-    dev: true
-
   /@sinclair/typebox/0.25.24:
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
     dev: true
@@ -1169,7 +1163,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       test-exclude: 6.0.0
-      vitest: 0.29.2_hjnfa4mohew6fc4mnpzgbfyvpa
+      vitest: 0.29.2_jsdom@21.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1194,16 +1188,6 @@ packages:
     resolution: {integrity: sha512-Hc44ft5kaAytlGL2PyFwdAsufjbdOvHklwjNy/gy/saRbg9Kfkxfh+PklLm1H2Ib/p586RkQeNFKYuJInUssyw==}
     dependencies:
       tinyspy: 1.1.1
-    dev: true
-
-  /@vitest/ui/0.29.2:
-    resolution: {integrity: sha512-GpCExCMptrS1z3Xf6kz35Xdvjc2eTBy9OIIwW3HjePVxw9Q++ZoEaIBVimRTTGzSe40XiAI/ZyR0H0Ya9brqLA==}
-    dependencies:
-      fast-glob: 3.2.12
-      flatted: 3.2.7
-      pathe: 1.1.0
-      picocolors: 1.0.0
-      sirv: 2.0.2
     dev: true
 
   /@vitest/utils/0.29.2:
@@ -2192,10 +2176,6 @@ packages:
     dependencies:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
-    dev: true
-
-  /flatted/3.2.7:
-    resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
   /for-each/0.3.3:
@@ -3198,11 +3178,6 @@ packages:
       ufo: 1.1.1
     dev: true
 
-  /mrmime/1.0.1:
-    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
-    engines: {node: '>=10'}
-    dev: true
-
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
@@ -3872,15 +3847,6 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
-  /sirv/2.0.2:
-    resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}
-    engines: {node: '>= 10'}
-    dependencies:
-      '@polka/url': 1.0.0-next.21
-      mrmime: 1.0.1
-      totalist: 3.0.0
-    dev: true
-
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -4178,11 +4144,6 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
-    dev: true
-
-  /totalist/3.0.0:
-    resolution: {integrity: sha512-eM+pCBxXO/njtF7vdFsHuqb+ElbxqtI4r5EAvk6grfAFyJ6IvWlSkfZ5T9ozC6xWw3Fj1fGoSmrl0gUs46JVIw==}
-    engines: {node: '>=6'}
     dev: true
 
   /tough-cookie/4.1.2:
@@ -4484,7 +4445,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.29.2_hjnfa4mohew6fc4mnpzgbfyvpa:
+  /vitest/0.29.2_jsdom@21.1.0:
     resolution: {integrity: sha512-ydK9IGbAvoY8wkg29DQ4ivcVviCaUi3ivuPKfZEVddMTenFHUfB8EEDXQV8+RasEk1ACFLgMUqAaDuQ/Nk+mQA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -4512,7 +4473,6 @@ packages:
       '@vitest/expect': 0.29.2
       '@vitest/runner': 0.29.2
       '@vitest/spy': 0.29.2
-      '@vitest/ui': 0.29.2
       '@vitest/utils': 0.29.2
       acorn: 8.8.2
       acorn-walk: 8.2.0
