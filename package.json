@@ -2,6 +2,7 @@
 	"name": "@tame/test",
 	"license": "MIT",
 	"version": "0.0.3",
+	"private": false,
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
