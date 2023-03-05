@@ -2,7 +2,7 @@
 	"name": "@aarrontame/test",
 	"author": "Aarron Tame",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": false,
 	"type": "module",
 	"sideEffects": false,

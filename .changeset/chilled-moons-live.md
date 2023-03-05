@@ -1,5 +1,0 @@
----
-"@aarrontame/test": minor
----
-
-build
