@@ -4,3 +4,11 @@ pnpm-lock.yaml
 tsconfig.json
 .changeset
 .github
+assets
+plop-templates
+.prettierignore
+.prettierrc
+.index.js
+plop.js
+plopfile.js
+tsup.config.ts
