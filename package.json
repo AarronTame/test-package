@@ -2,7 +2,7 @@
 	"name": "@aarrontame/test",
 	"author": "Aarron Tame",
 	"license": "MIT",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": false,
 	"type": "module",
 	"main": "dist/index.js",
