@@ -1,5 +1,5 @@
 /* GENERATED FILE */
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import {
   IconWeight,
   IconProps,
@@ -7,7 +7,7 @@ import {
   renderPathForWeight,
   RenderFunction,
 } from "../lib";
-import IconBase from "../lib/IconBase";
+import { IconBase } from "../lib/IconBase";
 
 const pathsByWeight = new Map<IconWeight, PaintFunction>([
   ["bold", (color: string) => (

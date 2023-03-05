@@ -1,8 +1,7 @@
 /* GENERATED FILE */
 export { Icon, IconProps, IconWeight, RenderFunction, IconContext } from "./lib";
-export { default as IconBase } from './lib/IconBase';
-
-export type Icons = {{#each data}}"{{ pascalCase this }}"{{#if @last}};{{else}} | {{/if}}{{/each}}
+export { IconBase } from './lib/IconBase';
+export { Icons } from './lib/icons';
 
 {{#each data}}
 export { {{ pascalCase this }}, {{ camelCase this }}Definition } from "./icons/{{ pascalCase this }}";

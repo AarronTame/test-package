@@ -1,18 +1,17 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
+	splitting: true,
 	clean: true,
-	sourcemap: false,
-	tsconfig: "./tsconfig.json",
-	format: ["esm", "cjs"],
-	entry: ["./src"],
-	splitting: false,
 	dts: true,
-	target: "es6",
-	external: ["react"],
-	minifyWhitespace: true,
-	bundle: false,
+	format: ["esm", "cjs"],
+	minify: true,
+	bundle: true,
 	skipNodeModulesBundle: true,
-	platform: "browser",
-	shims: false,
+	entryPoints: ["src/index.ts"],
+	target: "es6",
+	outDir: "dist",
+	sourcemap: false,
+	entry: ["src/**/*.ts", "src/**/*.tsx"],
+	minifyWhitespace: true,
 });

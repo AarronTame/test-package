@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import humanizeDuration from "humanize-duration";
-import { createExportFile, createIconFile } from "./plop.js";
+import { createExportFile, createIconFile, createIconsTypeFile } from "./plop.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -120,6 +120,7 @@ function main() {
 		createIconFile(key, iconAssetData);
 	}
 
+	createIconsTypeFile(Object.keys(assetMap));
 	createExportFile(Object.keys(assetMap));
 }
 

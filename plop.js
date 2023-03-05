@@ -16,3 +16,10 @@ export async function createExportFile(data) {
 		// console.log(results);
 	});
 }
+
+export async function createIconsTypeFile(data) {
+	const exportGenerator = plop.getGenerator("icon-types");
+	exportGenerator.runActions({ data }).then(function (results) {
+		// console.log(results);
+	});
+}

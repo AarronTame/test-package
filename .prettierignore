@@ -3,3 +3,4 @@ dist
 .changeset
 .github
 pnpm-lock.yaml
+*.hbs

@@ -27,4 +27,15 @@ export default function (
 			},
 		],
 	});
+
+	plop.setGenerator("icon-types", {
+		actions: [
+			{
+				type: "add",
+				path: "src/lib/icons.ts",
+				templateFile: "plop-templates/icon-type.hbs",
+				force: true,
+			},
+		],
+	});
 }
