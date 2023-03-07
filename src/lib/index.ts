@@ -1,9 +1,5 @@
 import React from "react";
 
-export type RenderFunction = (weight: IconWeight, color: string) => React.ReactNode | null;
-
-export type PaintFunction = (color: string) => React.ReactNode | null;
-
 export type IconWeight = "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
 
 export interface IconProps extends React.ComponentPropsWithoutRef<"svg"> {

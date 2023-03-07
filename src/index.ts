@@ -1,8 +1,8 @@
 /* GENERATED FILE */
-export type { Icon, IconProps, IconWeight, RenderFunction } from "./lib";
-export type { Icons } from './lib/icons';
+export type { Icon, IconProps, IconWeight } from "./lib";
+export type { Icons } from "./lib/icons";
 
-export { IconBase } from './lib/IconBase';
+export { IconBase } from "./lib/IconBase";
 export { IconContext } from "./lib";
 
 export { default as AddressBook } from "./icons/AddressBook";
